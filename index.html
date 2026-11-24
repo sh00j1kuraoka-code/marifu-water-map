@@ -800,8 +800,7 @@ const memberRole = memberSnap.data().role;
 
 canEditWaterSources =
   memberRole === "admin" ||
-  memberRole === "editor" ||
-  memberRole === undefined;
+  memberRole === "editor";
 document.getElementById("addHydrantButton").style.display =
   canEditWaterSources ? "inline-block" : "none";
 
