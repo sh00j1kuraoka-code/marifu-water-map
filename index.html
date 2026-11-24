@@ -415,9 +415,10 @@ const selectedRole = roleChoice === "1" ? "viewer" : "editor";
 });
   document.getElementById("logoutButton").addEventListener("click", async () => {
   try {
-    await signOut(auth);
-    alert("ログアウトしました");
-    window.location.reload();
+   await signOut(auth);
+localStorage.removeItem(WATER_CACHE_KEY);
+alert("ログアウトしました");
+window.location.reload();
   } catch (error) {
     alert("ログアウトできませんでした：" + error.message);
   }
