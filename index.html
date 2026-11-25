@@ -743,8 +743,8 @@ const newRecords = importRecords.filter(
 );
 
 alert("新しく登録できる地点：" + newRecords.length + "か所");
-if (importRecords.length !== 629) {
-  alert("KMLのデータ件数が629か所ではありません。処理を中止します。");
+if (importRecords.length === 0) {
+  alert("登録できる水利データがありません。処理を中止します。");
   return;
 }
 
